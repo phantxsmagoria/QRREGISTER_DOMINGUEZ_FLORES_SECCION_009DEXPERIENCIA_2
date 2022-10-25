@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  
+          defaultHref="/"
+          text=""
+          color="duoc"
+          mode="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background no-scroll">
+
+  <div>
+
+        <ion-card class="ancho cajita inicio">
+
+          <ion-card-content class="ion-text-center">
+            <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+            <form [formGroup] = "formularioLogin">
+
+
+            <div>
+              <img src="assets/divider.png" alt="">
+              <b><p class="subtitulo"> Inicio sesión </p></b>
+              <b><p class="titulo">Alumno</p></b>
+            </div>
+
+              <div class="padding-boton">
+
+                <ion-item>
+                  <ion-label class="smalltext" > Correo: </ion-label>
+                    <ion-input formControlName="correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label class="smalltext" > Contraseña: </ion-label>
+                  <ion-input formControlName="contraseña" type="password" required></ion-input>
+                </ion-item>
+
+              </div>
+            </form>
+
+
+                <br>
+                  <ion-button class="botonesiniciosesion distancia" (click)="Ingresar()" >
+                     Ingresar
+                   </ion-button>
+
+                 <div>
+                    <img src="assets/divider.png" alt="">
+                    <b><p class="subtitulo colorcontra" > ¿Olvidaste tu contraseña? </p></b>
+                </div>
+
+          </ion-card-content>
+        </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-buttons slot="end">
+      <ion-button class="smalltext" [routerLink]="['/regalumno']">Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

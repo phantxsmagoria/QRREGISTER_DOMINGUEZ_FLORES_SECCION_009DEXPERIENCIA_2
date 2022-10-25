@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="apps" color="duoc"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- COMIENZO ION CONTENT-->
+<ion-content class="background no-scroll">
+
+  <div class="padding-top">
+
+        <ion-card class="ancho cajita inicio">
+
+          <ion-card-content class="ion-text-center">
+            <!-- LOGO -->
+            <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+            
+            <div>
+              <img src="assets/divider.png" alt="">
+              <b><p class="subtitulo"> ¡Bienvenido, Alumno! </p></b>
+              <b><p class="titulo"></p></b>
+            </div>
+
+            <!-- BOTONES -->
+              <div class="padding-boton">
+
+                <ion-button class="botonesinicio"  routerLink="/escanear">
+                  Escanear QR
+                </ion-button>
+              
+                <ion-button class="botonesinicio"  routerLink="/asistencia">
+                  Revisar asistencia
+                </ion-button>
+                
+
+              </div>
+
+          </ion-card-content>
+
+        </ion-card>
+
+  </div>
+</ion-content>
+
+

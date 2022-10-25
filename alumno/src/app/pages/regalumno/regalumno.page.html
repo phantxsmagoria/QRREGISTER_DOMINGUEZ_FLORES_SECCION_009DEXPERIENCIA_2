@@ -1,0 +1,77 @@
+ <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button  
+            defaultHref="/"
+            text=""
+            color="duoc"
+            mode="ios"> </ion-back-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+ <ion-content class="background">
+    <div>
+      <ion-card class="ancho cajita inicio">
+
+
+        <ion-card-content class="ion-text-center">
+
+          <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+
+          <div>
+            <img src="assets/divider.png" alt="">
+            <b><p class="subtitulo"> Registro </p></b>
+            <b><p class="titulo">Alumno</p></b>
+          </div>
+          <div class="padding-boton">
+
+
+            <form [formGroup] = "formularioRegistro" (keyup.enter)="CrearUsuario()">
+  
+  
+              <ion-item>
+                <ion-label class="smalltext">Nombre: </ion-label>
+                <ion-input type="text" class="smalltext" formControlName="nombre"  placeholder="Ingrese su nombre..."></ion-input>
+              </ion-item>
+      
+              <ion-item>
+                <ion-label class="smalltext">Apellido: </ion-label>
+                <ion-input type="text" class="smalltext" formControlName="apellido" placeholder="Ingrese sus apellidos..."></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="smalltext">Correo: </ion-label>
+                <ion-input type="text" class="smalltext" formControlName="correo" placeholder="ejemplo@duoc.cl" ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="smalltext">Contraseña: </ion-label>
+                <ion-input type="password" class="smalltext" formControlName="contraseña" placeholder=" "></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label class="smalltext">Confirmar contraseña: </ion-label>
+                <ion-input type="password" class="smalltext" formControlName="confirmar" placeholder=" "></ion-input>
+              </ion-item>
+
+            <br>
+                <ion-button class="botonesiniciosesion distancia"  (click)="CrearUsuario()" routerLink="/sesion-alumno" >
+                  Registrarse
+                </ion-button>
+        
+            </form>
+  
+              </div>
+
+
+          </ion-card-content>
+      </ion-card>
+
+
+    </div>
+ </ion-content>
+
+

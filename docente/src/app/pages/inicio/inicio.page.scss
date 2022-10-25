@@ -1,0 +1,66 @@
+.background{
+    --background: url('/assets/fondo.png') 0 0/100% 100% no-repeat;
+}
+
+.padding-top {
+    padding-top: 250px;
+}
+
+.ancho{
+    width: 100%;
+    box-shadow: none;
+    border-radius: 14px;
+    background: white;
+}
+
+ion-content {
+
+    .cajita {
+        padding-bottom: 200px;
+        border-radius: 28px 28px 0 0 ;
+    }
+}
+
+ion-card.inicio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+
+  }
+
+p.login {
+    font-size: 0.7rem;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.no-scroll {
+    --overflow: hidden;
+}
+
+.padding-boton{
+    padding-top: 6%;
+}
+
+ion-button.botonesinicio {
+    --box-shadow: none;
+    --background: #2E26D9;
+    font-size: 0.9rem;
+    height: 42px;
+    width: 150px;
+}
+
+ion-button.botonesiniciosinfondo {
+
+    --box-shadow: none;
+    font-size: 0.9rem;
+    height: 42px;
+    width: 150px;
+}
+
+ion-item-divider{
+    min-height: 1.2px!important;
+    width: 45px;
+    --background: #2E26D9;
+    display: block;
+  }
