@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { NoIngresadoGuard } from './guards/no-ingresado.guard'; 
+import { NoIngresadoGuard } from './guards/no-ingresado.guard';
 import { IngresadoGuard } from './guards/ingresado.guard';
+
 
 const routes: Routes = [
   
@@ -16,34 +17,32 @@ const routes: Routes = [
     canActivate: [NoIngresadoGuard]
   },
   {
-    path: 'sesion-alumno',
-    loadChildren: () => import('./pages/sesion-alumno/sesion-alumno.module').then( m => m.SesionAlumnoPageModule),
+    path: 'qr',
+    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QRPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'sesion-docente',
+    loadChildren: () => import('./pages/sesion-docente/sesion-docente.module').then( m => m.SesionDocentePageModule),
     canActivate: [NoIngresadoGuard]
   },
-
   {
-    path: 'regalumno',
-    loadChildren: () => import('./pages/regalumno/regalumno.module').then( m => m.RegalumnoPageModule),
+    path: 'regdocente',
+    loadChildren: () => import('./pages/regdocente/regdocente.module').then( m => m.RegdocentePageModule),
     canActivate: [NoIngresadoGuard]
   },
   {
-    path: 'decision',
-    loadChildren: () => import('./pages/decision/decision.module').then( m => m.DecisionPageModule),
-    canActivate:[IngresadoGuard]
-  },
-  {
-    path: 'asistencia',
-    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule),
-    canActivate:[IngresadoGuard]
-  },
-  {
-    path: 'escanear',
-    loadChildren: () => import('./pages/escanear/escanear.module').then( m => m.EscanearPageModule),
-    canActivate:[IngresadoGuard]
+    path: 'profe',
+    loadChildren: () => import('./pages/profe/profe.module').then( m => m.ProfePageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'logout',
     loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'feriados',
+    loadChildren: () => import('./pages/feriados/feriados.module').then( m => m.FeriadosPageModule)
   },
 ];
 

@@ -18,27 +18,26 @@ export class AppComponent {
     {
       icon: 'home',
       name: 'Página Principal',
-      redirecTo:'/profe'
+      redirecTo:'/decision'
     },
 
     {
-      icon:'qr-code-outline',
-      name: 'Generar QR',
-      redirecTo:'/qr'
-    },
-    {
-      icon:'calendar',
-      name: 'Feriados',
-      redirecTo:'/feriados'
+      icon: 'scan-circle-outline',
+      name: 'Escanear QR',
+      redirecTo:'/escanear'
     },
 
+    {
+      icon:'checkbox-outline',
+      name: 'Registro de asistencia',
+      redirecTo:'/asistencia'
+    },
+        
     {
       icon:'log-out-outline',
       name: 'Cerrar sesión',
       redirecTo:'/logout'
     },
-
-
   ];
 
 

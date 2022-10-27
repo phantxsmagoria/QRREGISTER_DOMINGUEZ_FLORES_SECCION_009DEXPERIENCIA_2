@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular'
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-logout',
@@ -14,8 +14,6 @@ export class LogoutPage implements OnInit {
 
     localStorage.removeItem('ingresado');
     this.navController.navigateRoot('inicio');
-
-
   }
 
 }
